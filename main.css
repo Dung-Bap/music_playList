@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 62.5%;
+}
+
+:root {
+    --primary-color: #d362c8;
+    --secondary-color:#ee91e5;
+    --active-color: #e606d0;
+    --color-white: #f7f5ff;
+    --color-border: #f0f1fa;
+    --text-content-color: #8d8897;
+}
+
+body {
+    background-color: black;
+}
+
+.app-music {
+    display: block;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.container {
+    position: relative;
+    width: 360px;
+    text-align: center;
+    justify-content: center;
+}
+
+.display-none {
+    display: none;
+}
+
+.music-playlist {
+    height: 455px;
+    align-items: center;
+    background-color: var(--primary-color);
+    overflow-y: scroll;
+}
+
+.music-list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    box-shadow: -1px 3px #c93cbb;
+}
+
+.music-list-item:hover {
+    background-color: var(--active-color);
+
+}
+
+.music-list-item.seleted {
+    background-color: var(--active-color);
+}
+
+.music-list-item-content {
+    list-style: none
+}
+
+.music-list-content {
+    overflow: hidden;
+    width: 272px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-white);
+}
+
+.music-list-description {
+    text-align: left;
+    font-weight: 300;
+    font-size: 14px;
+    color: var(--color-white);
+}
+
+.music-list-item-cdthumb img{
+    margin-right: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid var(--color-border)
+}
+
+.header {
+    position: relative;
+    border-radius: 15px;
+    height: 60px;
+    background-color: var(--primary-color);
+}
+
+.back {
+    display: none;
+}
+
+.header.none .menu {
+    display: none;
+}
+
+.header.none .back {
+    display: block;
+}
+
+.header-icon {
+    cursor: pointer;
+    color: var(--color-white);
+    position: absolute;
+    font-size: 20px;
+    left: 4%;
+    top: 20%;
+    padding: 10px;
+}
+
+.music-dasboard {
+    position: absolute;
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 15px;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+
+}
+
+.music-title-name {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.music-title-singer {
+    font-size: 1.5rem;
+    color: var(--text-content-color);
+    font-weight: 700;
+}
+
+.cd-thumb {
+    margin: 10px auto;
+    border: 10px solid #f0f1fa;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-size: cover;
+}
+.control-btn .icon-pause {
+    display: none;
+}
+
+.control-btn.playing .icon-pause {
+    display: inline-block;
+}
+
+.control-btn.playing .icon-play {
+    display: none;
+}
+
+.control-btn-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 60px;
+    color: var(--secondary-color);
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.progress {
+    width: 100%;
+    height: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #D2C4F2;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.progress-volume {
+    width: 150px;
+    height: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #D2C4F2;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+.progress::-webkit-slider-thumb,
+.progress-volume::-webkit-slider-thumb{
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--button-color);
+      box-shadow: -20rem 5rem 10rem 20rem var(--primary-color);
+      cursor: pointer;
+      border-radius: 0.5rem;
+}
+
+.music-progress-time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: var(--primary-color)
+}
+
+.music-vloume {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.music-progress-volume i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.active {
+    display: none;
+}
+
+.btn-active {
+    color: var(--active-color);
+}
+
+.control-btn-list .btn:hover {
+    color: var(--active-color);
+    transform: scale(1.4);
+    transition: all 0.2s;
+    cursor: pointer;
+}

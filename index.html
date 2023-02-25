@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <title>Music_Player-Dung_Bap</title>
+
+</head>
+<body style="background-image: url('./assets/thumb Music_PlayList/IMG_1450.jpg')">
+        <div class="app-music">
+            <div class="header ">
+                <i class="header-icon menu fa-solid fa-bars "></i>
+                <i class="header-icon back fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="container">
+                <div class="music-dasboard">
+                    <div class="music-tilte">
+                        <h3 class="music-title-name">
+                            Cuối cùng thì
+                        </h3>
+                        <p class="music-title-singer">
+                            Jack - J97
+                        </p>
+                    </div>
+                    <div class="cd-thumb" style="background-image: url('./assets/thumb Music_PlayList/img-cuoicungthi.webp')">
+                    </div>
+                    <div class="control-btn  ">
+                        <div class="control-btn-list">
+                            <div class=" btn control-btn-repeat">
+                                <i class="fa-solid fa-repeat"></i>
+                            </div>
+                            <div class="btn-prev btn control-btn-backward-step">
+                                <i class="fa-solid fa-backward-step"></i>
+                            </div>
+                            <div class=" btn control-btn-toggle-play">
+                                <i class="fa-solid fa-play icon-play"></i>
+                                <i class="fa-solid fa-pause icon-pause"></i>
+                            </div>
+                            <div class="btn-next btn control-btn-forward-step">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </div>
+                            <div class="btn control-btn-shuffle">
+                                <i class="fa-solid fa-shuffle"></i>
+                            </div>
+                        </div>
+                        <div class="music-progress">
+                            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                            <audio src="" id="audio"></audio>
+                        </div>
+                        <div class="music-progress-time">
+                            <div class="progress-curren-time">00:00 </div>
+                            <div class="progress-duration-time">00:00</div>
+                        </div>
+                        <div class="music-vloume">
+                            <div class="music-progress-volume ">
+                                <i class=" btn-high fa-solid fa-volume-high "></i>
+                                <i class=" btn-low active fa-solid fa-volume-xmark"></i>
+                            </div>
+                            <div>
+                                <input id="progress" class="progress-volume" type="range" value="100" step="1" min="0" max="100">
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="music-playlist  ">
+                    <div class="music-list ">
+                        <div class="music-list-item ">
+                            <div class="music-list-item-cdthumb">
+                                <img src="" alt="">
+                            </div>
+                            <div class="music-list-item-content">
+                                <h3 class="music-list-content">${song.name}</h3>
+                                <p class="music-list-description">${song.singer}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+         </div>
+    
+<script src="./main.js"></script>    
+</body>
+</html>
