@@ -116,7 +116,7 @@ renderSong: function() {
             }
         })
     },
-    loadCurrentSong: function() {
+    loadCurrentSong() {
         musicName.textContent = this.currentSong.name;
         musicSinger.textContent = this.currentSong.singer;
         cdThumb.style.backgroundImage = `url('${this.currentSong.img}')`;
@@ -330,5 +330,6 @@ renderSong: function() {
 }
 
 app.start()
+
 
 
