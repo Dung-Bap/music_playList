@@ -95,7 +95,7 @@ const app = {
 renderSong: function() {
       var htmls = app.songs.map(function(song, index) {
             return `
-            <div data-index="${index}" class="music-list-item ${index === app.currentIndex ? "seleted" : "" }" >
+            <div data-index="${index}" class="music-list-item ${index === app.currentIndex ? "selected" : "" }" >
                 <div class="music-list-item-cdthumb">
                     <img src="${song.img}" alt="">
                 </div>

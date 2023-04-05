@@ -80,7 +80,7 @@ html *::-webkit-scrollbar-track {
 
 }
 
-.music-list-item.seleted {
+.music-list-item.selected {
     background-color: var(--active-color);
 }
 
